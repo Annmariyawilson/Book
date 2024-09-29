@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Navbar, Form, FormControl, Button, Container } from 'react-bootstrap';
+import { Navbar as BootstrapNavbar, Form, FormControl, Button, Container } from 'react-bootstrap';
 
-const NavBar = ({ onSearch }) => {
+const Navbar = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSearch = () => {
@@ -9,11 +9,11 @@ const NavBar = ({ onSearch }) => {
   };
 
   return (
-    <Navbar bg="light" expand="lg">
+    <BootstrapNavbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand>
+        <BootstrapNavbar.Brand>
           <i className="fa-solid fa-book-open fa-lg" style={{ color: "#000000" }} /> Book Store
-        </Navbar.Brand>
+        </BootstrapNavbar.Brand>
         <Form className="d-flex ml-auto" onSubmit={(e) => e.preventDefault()}>
           <FormControl
             type="search"
@@ -27,8 +27,8 @@ const NavBar = ({ onSearch }) => {
           </Button>
         </Form>
       </Container>
-    </Navbar>
+    </BootstrapNavbar>
   );
 };
 
-export default NavBar;
+export default Navbar;
