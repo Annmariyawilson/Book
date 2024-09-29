@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import AddBook from './components/AddBook';
 import BookList from './components/BookList';
 import { Container } from 'react-bootstrap';
-import NavBar from './components/Navbar';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteBook } from './redux/bookSlice';
+import NavBar from './components/Navbar';
 
 const App = () => {
   const books = useSelector((state) => state.books.books);
